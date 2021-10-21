@@ -8,6 +8,7 @@ import org.togetherjava.tjbot.commands.mathcommands.TeXCommand;
 import org.togetherjava.tjbot.commands.moderation.BanCommand;
 import org.togetherjava.tjbot.commands.moderation.KickCommand;
 import org.togetherjava.tjbot.commands.moderation.UnbanCommand;
+import org.togetherjava.tjbot.commands.mathcommands.wolframalpha.WolframAlphaCommand;
 import org.togetherjava.tjbot.commands.tags.TagCommand;
 import org.togetherjava.tjbot.commands.tags.TagManageCommand;
 import org.togetherjava.tjbot.commands.tags.TagSystem;
@@ -55,6 +56,7 @@ public enum Commands {
         commands.add(new KickCommand());
         commands.add(new BanCommand());
         commands.add(new UnbanCommand());
+        commands.add(new WolframAlphaCommand());
 
         return commands;
     }
