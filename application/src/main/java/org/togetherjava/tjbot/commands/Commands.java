@@ -5,9 +5,7 @@ import org.togetherjava.tjbot.commands.basic.DatabaseCommand;
 import org.togetherjava.tjbot.commands.basic.PingCommand;
 import org.togetherjava.tjbot.commands.basic.VcActivityCommand;
 import org.togetherjava.tjbot.commands.mathcommands.TeXCommand;
-import org.togetherjava.tjbot.commands.moderation.BanCommand;
-import org.togetherjava.tjbot.commands.moderation.KickCommand;
-import org.togetherjava.tjbot.commands.moderation.UnbanCommand;
+import org.togetherjava.tjbot.commands.moderation.*;
 import org.togetherjava.tjbot.commands.tags.TagCommand;
 import org.togetherjava.tjbot.commands.tags.TagManageCommand;
 import org.togetherjava.tjbot.commands.tags.TagSystem;
@@ -55,6 +53,8 @@ public enum Commands {
         commands.add(new KickCommand());
         commands.add(new BanCommand());
         commands.add(new UnbanCommand());
+        commands.add(new MuteCommand());
+        commands.add(new UnmuteCommand());
 
         return commands;
     }
