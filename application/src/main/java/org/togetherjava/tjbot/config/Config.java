@@ -27,7 +27,6 @@ public final class Config {
     private final String mutedRolePattern;
     private final String heavyModerationRolePattern;
     private final String softModerationRolePattern;
-    private final String mutedRolePattern;
 
     @SuppressWarnings("ConstructorWithTooManyParameters")
     @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
@@ -38,8 +37,7 @@ public final class Config {
             @JsonProperty("modAuditLogChannelPattern") String modAuditLogChannelPattern,
             @JsonProperty("mutedRolePattern") String mutedRolePattern,
             @JsonProperty("heavyModerationRolePattern") String heavyModerationRolePattern,
-            @JsonProperty("softModerationRolePattern") String softModerationRolePattern,
-            @JsonProperty("mutedRolePattern") String mutedRolePattern) {
+            @JsonProperty("softModerationRolePattern") String softModerationRolePattern) {
         this.token = token;
         this.databasePath = databasePath;
         this.projectWebsite = projectWebsite;
@@ -48,7 +46,6 @@ public final class Config {
         this.mutedRolePattern = mutedRolePattern;
         this.heavyModerationRolePattern = heavyModerationRolePattern;
         this.softModerationRolePattern = softModerationRolePattern;
-        this.mutedRolePattern = mutedRolePattern;
     }
 
     /**
@@ -148,14 +145,5 @@ public final class Config {
      */
     public String getSoftModerationRolePattern() {
         return softModerationRolePattern;
-    }
-
-    /**
-     * Gets the REGEX pattern used to identify the role assigned to muted users.
-     *
-     * @return the role name pattern
-     */
-    public String getMutedRolePattern() {
-        return mutedRolePattern;
     }
 }
