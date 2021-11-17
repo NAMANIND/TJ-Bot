@@ -53,7 +53,7 @@ public enum Commands {
         commands.add(new TagsCommand(tagSystem));
         commands.add(new VcActivityCommand());
         commands.add(new KickCommand());
-        commands.add(new BanCommand());
+        commands.add(new BanCommand(database));
         commands.add(new UnbanCommand());
 
         return commands;
