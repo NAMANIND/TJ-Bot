@@ -40,7 +40,7 @@ public final class Config {
             @JsonProperty("mutedRolePattern") String mutedRolePattern,
             @JsonProperty("heavyModerationRolePattern") String heavyModerationRolePattern,
             @JsonProperty("softModerationRolePattern") String softModerationRolePattern,
-            @JsonProperty("tagManageRolePattern") String tagManageRolePattern) {
+            @JsonProperty("tagManageRolePattern") String tagManageRolePattern,
             @JsonProperty("wolframAlphaAppId") String wolframAlphaAppId) {
         this.token = token;
         this.databasePath = databasePath;
@@ -136,7 +136,7 @@ public final class Config {
     /**
      * Gets the REGEX pattern used to identify roles that are allowed to use heavy moderation
      * commands, such as banning, based on role names.
-     * 
+     *
      * @return the REGEX pattern
      */
     public String getHeavyModerationRolePattern() {
@@ -146,7 +146,7 @@ public final class Config {
     /**
      * Gets the REGEX pattern used to identify roles that are allowed to use soft moderation
      * commands, such as kicking, muting or message deletion, based on role names.
-     * 
+     *
      * @return the REGEX pattern
      */
     public String getSoftModerationRolePattern() {
@@ -162,10 +162,13 @@ public final class Config {
     public String getTagManageRolePattern() {
         return tagManageRolePattern;
     }
+
+    /**
      * Gets the application ID used to connect to the WolframAlpha API.
-     *
+     * 
      * @return the application ID for the WolframAlpha API
      */
+
     public String getWolframAlphaAppId() {
         return wolframAlphaAppId;
     }
