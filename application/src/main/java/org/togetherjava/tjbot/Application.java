@@ -5,6 +5,7 @@ import net.dv8tion.jda.api.JDABuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.togetherjava.tjbot.commands.Commands;
+import org.togetherjava.tjbot.commands.moderation.TemporaryModerationRoutine;
 import org.togetherjava.tjbot.commands.system.CommandSystem;
 import org.togetherjava.tjbot.config.Config;
 import org.togetherjava.tjbot.db.Database;
@@ -85,6 +86,7 @@ public enum Application {
             // TODO This should be moved into some proper command system instead (see GH issue #235
             // which adds support for routines)
             new ModAuditLogRoutine(jda, database).start();
+            new TemporaryModerationRoutine(jda, database).start();
 
             Runtime.getRuntime().addShutdownHook(new Thread(Application::onShutdown));
         } catch (LoginException e) {
